@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pop your balloon!</title>
+  <link rel="shortcut icon" type="image/png" href="images/ico_full.png" />
+  <link rel="stylesheet" href="stylesheet/prism.css">
+  <link rel="stylesheet" href="stylesheet/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- https://images.unsplash.com/photo-1519122295308-bdb40916b529?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1568&q=80 -->
+  <div class="banner"
+    style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/balloons.jpg);">
+    <div id="class-languages">
+      <i class="fab fa-html5 mr-1" style="color: #f84820"></i>
+      <i class="fab fa-css3-alt mr-1" style="color: #1970b5"></i>
+      <i class="fab fa-js-square mr-1" style="color: #FFE01B"></i>
+    </div>
+    <div class="container">
+      <div class="main">
+        <img src="images/logo.png" alt="">
+        <div class="class-title">
+          <h1>Pop your balloon!...</h1>
+          <br>
+          <h4>intro to P5.js</h4>
+        </div>
+      </div>
+      <p><em>To "pop someone's balloon"</em> Is a Quebecan expression that means to bring that person back to reality.
+        And that's exactly what today's challenge does! It brings us back to the harsh reality: that even a game for
+        children like <a href="https://www.youtube.com/watch?v=TANJP041TKE" target="_blank">Balloon Pop</a> is hard to
+        code. Another more reason to tackle this challenge head on!</p>
+      <a class="btn btn-primary tl-button" href="#challenge" role="button">Start !</a>
+    </div>
+  </div>
+
+  <div class="container" id="challenge">
+    <div class="gamification">
+      <div class="progress">
+        <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar"
+          aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <div class="alert alert-danger" role="alert">
+        A simple danger alert—check it out!
+      </div>
+    </div>
+
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapseOne"
+              aria-expanded="false" aria-controls="collapseOne">
+              Step 1 - Challenges to complete before this one
+            </button>
+          </h2>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Before tackling this challenge, we recommend that you have previously completed the two following
+              challenges:</p>
+            <ol>
+              <li><a href="https://techieslab.github.io/year-prediction_instructions/" target="_blank">En 2020 je
+                  serai...</a></li>
+              <li><a href="https://techieslab.github.io/rainbow_instructions/" target="_blank">Ça va bien aller</a></li>
+            </ol>
+
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              Step 2 - Connecting to P5.js
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>First thing, before starting to work on any sort of p5.js project: <strong>sign in <a
+                  href="https://editor.p5js.org/" target="_blank">to your account</a></strong> by clicking on "Log in".
+            </p>
+            <img src="images/log_in.png" class="img-shadow mb-3" alt="">
+
+            <p>Rename your project by clicking on the little pencil <i class="fas fa-pencil-alt"></i>.</p>
+
+            <div class="alert alert-warning" role="alert">
+              <p>
+                <i class="fas fa-exclamation-circle"></i>It may seem silly to say... but dont forget to sign in to your
+                account before starting to work! This will allow you to save your work (your <em>sketches</em>) for free
+                on the servers of p5.js. If you choose not to do this, you must then be prepared to download your files
+                locally (on your computer) and if anything happens to that computer, you risk loosing your work 😢
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed task" type="button" data-toggle="collapse"
+              data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Step 3 - Draw your first balloon!
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Our goal for the first part of the challenge is to make balloons of different colors appear and disappear
+              on our canvas.</p>
+            <p>🤔 How do we draw balloons in p5.js? Remember that you should always start with the simplest solution!
+              Once it works, you can make your code more sophisticated.</p>
+            <p>In the challenge <a href="https://techieslab.github.io/rainbow_instructions/" target="_blank">Ça va bien
+                aller</a>, we saw how to draw circles in different sizes and colors in p5.js, so we can use the function
+              <code class="language-js">circle()</code> to draw a red balloon. It won't be a very realistic balloon, but
+              it's a start!</p>
+
+            <p>Where should we use the function <code class="language-js">circle()</code> in our code? In the function
+              <code class="language-js">setup()</code>? In the function <code class="language-js">draw()</code>?</p>
+
+            <div class="alert alert-warning" role="alert">
+              <p>
+                <i class="fas fa-exclamation-circle"></i>
+                Remember, the function <code class="language-js">setup()</code> is only executed once, after you press
+                <strong>PLAY</strong> while on the other hand, the function <code class="language-js">draw()</code> is
+                called multiple times each second.
+              </p>
+            </div>
+
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer1" role="button"
+                aria-expanded="false" aria-controls="collapseAnswer1">Answer</a>
+            </p>
+            <div class="collapse mb-3" id="collapseAnswer1">
+              <div class="card card-body">
+                <p>In the function <code class="language-js">draw()</code>, since the coordinates of our balloon will
+                  change during the execution of the program.</p>
+                <p>Your code could be something like this:</p>
+                <pre><code class="language-js">
+                  //...
+                  function draw() {
+                  background(220);
+
+                  fill("red");
+                  circle(100, 100, 60);
+                }
+              </code></pre>
+              </div>
+            </div>
+
+            <img class="img-shadow mb-3" src="images/red_round.png" alt="">
+
+            <p>For the string of your balloon, look in the <a href="https://p5js.org/reference/">documentation of
+                p5.js</a> a function that could draw a line. </p>
+
+            <p>
+              <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint1" role="button"
+                aria-expanded="false" aria-controls="collapseHint1">Hint</a>
+            </p>
+            <div class="collapse mb-3" id="collapseHint1">
+              <div class="card card-body">
+                <p>The key word is <em>line</em>...</p>
+              </div>
+            </div>
+
+            <p>If you choose the same coordinates for the origin point of your line as you did for the circle, it will
+              result in something funky:</p>
+
+            <pre><code class="language-js">line(100 , 100, 100, 250);</code></pre>
+
+            <img class="img-shadow mb-3" src="images/balloon_stem.png" alt="">
+
+
+            <p>You want the line to start where the red circle ends. You must therefore "lower" the line, that is to say
+              change its position on the axis of <code class="language-js">y</code>.</p>
+
+            <img class="img-shadow mb-3" src="images/balloon_stem_ok.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFour">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseFour"
+              aria-expanded="false" aria-controls="collapseFour">
+              Step 4 - Making the balloon "move"
+            </button>
+          </h2>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>We are now going to move our ball everywhere on our canvas.</p>
+
+            <img class="flexgif img-shadow mb-3" src="images/XXXX" alt="">
+
+            <p>The new position of the ball will be determined at random by the computer. Do you remember the function
+              that allowed us to randomly choose an adjective, in the challenge: <a
+                href="https://techieslab.github.io/year-prediction_instructions/">En 2020, je serai...</a>?</p>
+
+            <p>It was the function <code class="language-js">random()</code>. You can also use this function to choose a
+              random number. If I want a random number between 0 and 400 (because my canvas is 400 pixels tall), I can
+              code this: <code class="language-js">random(0,400)</code></p>
+
+            <p>Instead of giving our balloon the same X position (100) all the time, we can now choose an X position at
+              random: <code class="language-js">circle(random(0, 400), 100, 60);</code></p>
+
+            <p>The result is very spooky:</p>
+
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#collapseSee1" role="button" aria-expanded="false"
+                aria-controls="collapseSee1">View (careful, it hurts your eyes)</a>
+            </p>
+            <div class="collapse mb-3" id="collapseSee1">
+              <div class="card card-body">
+                <img class="img-shadow mb-3" src="images/balloon_random_without_stem.gif" alt="">
+
+              </div>
+            </div>
+
+
+            <p>Two problems:</p>
+
+            <ol>
+              <li>The balloon's string does not move</li>
+              <li>The balloon moves far too quickly</li>
+            </ol>
+
+            <p>Let's start with the rod. Its position on the x axis must follow that of the ball. That said, if we write
+              the following code, it doesn't quite work:</p>
+
+            <pre><code class="language-js">
+            line(random(0, 400) , 130, random(0, 400), 250);
+          </code></pre>
+
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#collapseSee2" role="button" aria-expanded="false"
+                aria-controls="collapseSee2">View (warning, it also hurts your eyes)</a>
+            </p>
+            <div class="collapse mb-3" id="collapseSee2">
+              <div class="card card-body">
+                <img class="img-shadow mb-3" src="images/balloon_random_with_stem.gif" alt="">
+
+              </div>
+            </div>
+            <p>The string does move randomly, but it does not stay below the balloon! In fact, the computer chooses a
+              first X value for the balloon (for example 150). Then it chooses <em> again </em> a value at random for
+              the value for X from the top of the string (248, for example). And finally, the computer still randomly
+              chooses a third X value for the bottom of the string (5, for example). </p>
+
+            <p>If you want the string to be vertical, the value of X for the top and bottom of the string must be the
+              same. This code works: </p>
+
+            <pre><code class="language-js">line(100, 100, 100, 250);</code></pre>
+
+            <p>but not this one:</p>
+
+            <pre><code class="language-js">line(248, 100, 5, 250);</code></pre>
+
+            <p>Solution?</p>
+
+            <p>The computer must choose only one position for X and remember it in order to reuse it. And when someone
+              says "remember" in programming, they say...</p>
+
+            <h3>VARIABLES!</h3>
+
+            <p>We will store the value for X in a variable and re-use it:</p>
+
+            <pre><code class="language-js">
+            let positionX = random(0, 400);
+            circle(positionX, 100, 60);
+            line(positionX, 130, positionX, 250);
+          </code></pre>
+
+            <p>YESS! The string follows the balloon! 💪</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFive">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseFive"
+              aria-expanded="false" aria-controls="collapseFive">
+              Step 5 - Display the balloons slower
+            </button>
+          </h2>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+          <div class="card-body">
+
+            <p>Inspire yourself from step 9 in the challenge <a
+                href="https://techieslab.github.io/year-prediction_instructions/">of the predictions</a> to slow down
+              the balloon.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingSix">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseSix"
+              aria-expanded="false" aria-controls="collapseSix">
+              Step 6 - Make your balloon more realistic
+              <span class="badge badge-dark">Optional</span>
+            </button>
+          </h2>
+        </div>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+          <div class="card-body">
+
+            <p>Our basic code works, so we can have fun making it more sophisticated. What would be nice is to work on
+              the appearance of the circle so that it has a more realistic balloon shape.</p>
+            <img class="img-shadow mb-3" src="images/ellipse_balloon.png" alt="">
+            <p>Instead of using a circle, you can use an ellipse. Consult the <a
+                href="https://p5js.org/reference/#/p5/ellipse">documentation of p5.js</a> to draw ellipses.</p>
+
+            <p>The idea is to use two ellipses: one for the balloon itself, and the other (much smaller) for its knot.
+            </p>
+
+            <p>Some ways to help you:</p>
+            <ul>
+              <li>To remove the black outline of the ball, you must use the function <code
+                  class="language-js">noStroke()</code></li>
+              <li>If you use the function <code class="language-js">noStroke()</code> your string will probably
+                disappear. You can bring back the string with the function <code class="language-js">stroke()</code>
+              </li>
+              <li>To move the balloon vertically, you will also have to give a random value to the Y position of the
+                ball. You will probably need a second variable for this.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingSeven">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed task" type="button" data-toggle="collapse"
+              data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              Step 7 - Random colors
+              <span class="badge badge-dark">Optional</span>
+              <span class="badge badge-warning">Difficult 🏆</span>
+            </button>
+          </h2>
+        </div>
+        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+          <div class="card-body">
+
+            <p>How can we make the balloon change randomly between three colors (red, blue and green, for example)?</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-links">
+      <a href="https://techieslab.be/"><i class="fas fa-globe"></i></i></a>
+      <a href="https://www.facebook.com/TechiesLabBrussels"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/TechiesLab"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="footer-copyright">
+      <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/3298561-faites-votre-mise-en-page-avec-flexbox#/id/r-3298711"
+        rel="noopener noreferrer" target="_blank" class="alert-link copyright">
+        <i class="far fa-copyright"></i>
+        2020 Techies Lab ASBL. All rights reserved.
+      </a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="javascript/prism.js"></script>
+  <script type="text/javascript" src="javascript/app.js"></script>
+</body>
+
+</html>
