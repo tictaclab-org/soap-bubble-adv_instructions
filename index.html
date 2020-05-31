@@ -21,14 +21,13 @@
         <img src="images/logo.png" alt="">
         <div class="class-title">
           <h1>Bulles de savants...</h1>
-          <h4>intro à P5.js</h4>
+          <h4>P5.js</h4>
         </div>
       </div>
-      <p>Petit défi pour découvrir les fonctions, créer un GIF et se rappeler que le savon, ça peut aussi servir à faire des bulles!</p>
+      <p>Petit défi pour réviser les fonctions, créer un GIF et se rappeler que le savon, ça ne sert pas qu'à se laver les mains!</p>
       <a class="btn btn-primary tl-button" href="#challenge" role="button">Commencer !</a>
     </div>
   </div>
-  <p id=english-link>🗨️ For the english version click<a href="english_index.html"> here</a>!</p>
 
   <div class="container" id="challenge">
     <div class="gamification">
@@ -44,18 +43,13 @@
         <div class="card-header" id="headingOne">
           <h2 class="mb-0">
             <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-              Etape 1 - Défis à compléter avant celui-ci
+              Etape 1 - Défi à compléter avant celui-ci
             </button>
           </h2>
         </div>
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Avant de t'attaquer à ce défi, on te conseille de compléter les défis suivants:</p>
-            <ol>
-              <li><a href="https://techieslab.github.io/year-prediction_instructions/" target="_blank">En 2020 je serai...</a></li>
-              <li><a href="https://techieslab.github.io/rainbow_instructions/" target="_blank">Ça va bien aller</a></li>
-              <li><a href="https://techieslab.github.io/balloon_instructions/" target="_blank">Péter ta balloune</a></li>
-            </ol>
+            <p>Avant de t'attaquer à ce défi, on te conseille d'avoir fini le défi <a href="https://techieslab.github.io/balloon-adv_instructions/">Péter ta balloune</a>
           </div>
         </div>
       </div>
@@ -93,7 +87,7 @@
         </div>
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
           <div class="card-body">
-            <p>En <a href="https://editor.p5js.org/Margotte/sketches/HL-jlYbaWW" target="_blank">cliquant par ici</a>, tu trouveras un aperçu de ce qu'on va coder. À vrai dire, tu viens de voir la solution du défi! Est-ce que c'est tricher? Pas du tout! Lire le code de <strong data-toggle="tooltip" title="développeuses et développeurs">devs</strong> plus avancés fait partie de l'apprentissage!</p>
+            <p>En <a href="https://editor.p5js.org/Margotte/sketches/HL-jlYbaWW" target="_blank">cliquant par ici</a>, tu trouveras un aperçu de ce qu'on va coder. À vrai dire, tu viens de voir une partie de la solution du défi! Est-ce que c'est tricher? Pas du tout! Lire le code de <strong data-toggle="tooltip" title="développeuses et développeurs">devs</strong> plus avancés fait partie de l'apprentissage!</p>
 
             <p>Ce code contient de nombreuses <strong>fonctions</strong>. Les fonctions servent à donner des instructions à l'ordinateur et sont très utiles pour ne pas avoir à répéter toujours les mêmes instructions. Tu utilises déjà plein de fonctions dans tes programmes. <code class="language-js">color()</code>, par exemple, est une fonction qui permet de créer une couleur grâce à la librairie p5.js. <code class="language-js">ellipse()</code> est une fonction qui dessine une ellipse (ou un cercle). Te souviens-tu de la fonction pour dessiner une ligne?</p>
 
@@ -124,7 +118,7 @@
               </code>
             </pre>
 
-            <p>Ici, il y avait trois paramètres <code class="language-js">150</code>, <code class="language-js">130</code> et <code class="language-js">100</code>. Finalement, certaines fonctions ne prennent aucun paramètre:</p>
+            <p>Et d'autres ne prennent aucun paramètre:</p>
 
             <pre>
               <code class="language-js">
@@ -132,7 +126,7 @@
               </code>
             </pre>
 
-            <p>La fonction <code class="language-js">noStroke()</code> ne prend pas de paramètres, mais on garde quand même les parenthèses pour indiquer que si la fonction prenait des paramètres, c'est là où ils iraient. Et puis, pour nous devs, c'est un bon indice pour savoir que c'est une fonction (et non pas une variable, par exemple).</p>
+            <p>Bien que fonction <code class="language-js">noStroke()</code> ne prenne aucun paramètre, on garde quand même les parenthèses pour indiquer que si la fonction prenait des paramètres, c'est là où ils iraient. Et puis, pour nous devs, c'est un bon indice pour savoir que c'est une fonction (et non pas une variable, par exemple).</p>
 
             <p>La plupart du temps, on utilise des fonctions qui existent déjà dans la librairie p5.js. <code class="language-js">color()</code>, <code class="language-js">noStroke()</code>, <code class="language-js">ellipse()</code>, etc. sont toutes des fonctions qui existent déjà!</p>
 
@@ -285,36 +279,27 @@
 
           <pre>
             <code class="language-js">
-              let img;
+            let img;
 
-              function preload() {
+            function preload() {
               img = loadImage('assets/XXXX');
             }
 
             function setup() {
-            createCanvas(400, 400);
-            image(img, 0, 0);
-          }
-        </code>
-      </pre>
+              createCanvas(400, 400);
+            }
+
+            function draw() {
+              background(YYYY);
+            }
+          </code>
+        </pre>
 
       <div class="alert alert-warning" role="alert">
-        <p><i class="fa fa-exclamation-circle"></i>  Remplace les XXXX par le nom du fichier de ton image. Respecte la casse (les majuscules et les minuscules!)</p>
+        <p><i class="fa fa-exclamation-circle"></i>  Remplace les XXXX par le nom du fichier de ton image. Respecte la casse (les majuscules et les minuscules!) À la place des YYYY, insère la variable qui stocke ton image.</p>
       </div>
 
-      <p>Si l'image est trop grande, tu peux changer sa taille avec la fonction <code class="language-js">resize()</code>:</p>
-      <pre>
-        <code class="language-js">
-          function setup() {
-          createCanvas(400, 400);
-          img.resize(400, 0);
-          image(img, 0, 0);
-        }
-      </code>
-    </pre>
-
     <p>Rappelle-toi que tu peux également changer la taille du canevas grâce à la fonction <code class="language-js">createCanvas()</code>.</p>
-
   </div>
 </div>
 </div>
@@ -368,7 +353,7 @@
       <p>Tu peux utiliser la fonction <code class="language-js">fill()</code> pour donner une couleur à ta bulle. Pour donner un aspect plus "véridique" à ta bulle, essaye de lui donner une couleur légèrement transparente.</p>
 
       <img class="img-shadow m-3" src="images/transparent-color.png" alt="">
-      <p>Pour une couleur transparente, il faut d'abord trouver le code de la couleur en RGB (<span style="color: red"><strong>RED</strong></span>, <span style="color: green"><strong>GREEN</strong></span>, <span style="color: blue"><strong>BLUE</strong></span>:</p>
+      <p>Pour une couleur transparente, il faut d'abord trouver le code de la couleur en RGB (<span style="color: red"><strong>RED</strong></span>, <span style="color: green"><strong>GREEN</strong></span>, <span style="color: blue"><strong>BLUE</strong></span>):</p>
 
       <pre>
         <code class="language-js">
@@ -377,7 +362,7 @@
         </code>
       </pre>
 
-      <p>Pour ajouter de la transparence, on utilise le code RGBA, avec un quatrième nombre en 0 et 1:</p>
+      <p>Pour ajouter de la transparence, on utilise le code RGB<strong>A</strong>, avec un quatrième nombre en 0 et 1:</p>
 
       <pre>
         <code class="language-js">
@@ -432,6 +417,24 @@
     </div>
   </div>
 </div><!--  end card -->
+<div class="card">
+  <div class="card-header" id="headingNine">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+        Etape 9 - Refactorisation avec une fonction
+      </button>
+    </h2>
+  </div>
+  <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+    <div class="card-body">
+      <p>Tes bulles s'affichent correctement avec une lettre dans chaque? Chouette! Il est maintenant temps de refactorisé ton code en utilisant... au moins une fonction!</p>
+
+      <p>Observe ton code. Quelles lignes se répètent? Quand des lignes de code se répètent, c'est souvent une bonne idée de créer une fonction qui contient ces lignes et que l'on pourra appeler (utiliser) à plusieurs endroits.</p>
+
+    </div>
+  </div>
+</div><!--  end card -->
+
 
 
 
