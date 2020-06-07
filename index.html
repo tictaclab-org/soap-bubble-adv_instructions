@@ -21,13 +21,14 @@
         <img src="images/logo.png" alt="">
         <div class="class-title">
           <h1>Bulles de savants...</h1>
-          <h4>P5.js</h4>
+          <h4>intro à P5.js</h4>
         </div>
       </div>
-      <p>Petit défi pour réviser les fonctions, créer un GIF et se rappeler que le savon, ça ne sert pas qu'à se laver les mains!</p>
+      <p>Petit défi pour découvrir les fonctions, créer un GIF et se rappeler que le savon, ça peut aussi servir à faire des bulles!</p>
       <a class="btn btn-primary tl-button" href="#challenge" role="button">Commencer !</a>
     </div>
   </div>
+  <p id=english-link>🗨️ For the english version click<a href="english_index.html"> here</a>!</p>
 
   <div class="container" id="challenge">
     <div class="gamification">
@@ -43,13 +44,18 @@
         <div class="card-header" id="headingOne">
           <h2 class="mb-0">
             <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-              Etape 1 - Défi à compléter avant celui-ci
+              Etape 1 - Défis à compléter avant celui-ci
             </button>
           </h2>
         </div>
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Avant de t'attaquer à ce défi, on te conseille d'avoir fini le défi <a href="https://techieslab.github.io/balloon-adv_instructions/">Péter ta balloune</a>
+            <p>Avant de t'attaquer à ce défi, on te conseille de compléter les défis suivants:</p>
+            <ol>
+              <li><a href="https://techieslab.github.io/year-prediction_instructions/" target="_blank">En 2020 je serai...</a></li>
+              <li><a href="https://techieslab.github.io/rainbow_instructions/" target="_blank">Ça va bien aller</a></li>
+              <li><a href="https://techieslab.github.io/balloon_instructions/" target="_blank">Péter ta balloune</a></li>
+            </ol>
           </div>
         </div>
       </div>
@@ -87,7 +93,7 @@
         </div>
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
           <div class="card-body">
-            <p>En <a href="https://editor.p5js.org/Margotte/sketches/HL-jlYbaWW" target="_blank">cliquant par ici</a>, tu trouveras un aperçu de ce qu'on va coder. À vrai dire, tu viens de voir une partie de la solution du défi! Est-ce que c'est tricher? Pas du tout! Lire le code de <strong data-toggle="tooltip" title="développeuses et développeurs">devs</strong> plus avancés fait partie de l'apprentissage!</p>
+            <p>En <a href="https://editor.p5js.org/Margotte/sketches/HL-jlYbaWW" target="_blank">cliquant par ici</a>, tu trouveras un aperçu de ce qu'on va coder. À vrai dire, tu viens de voir la solution du défi! Est-ce que c'est tricher? Pas du tout! Lire le code de <strong data-toggle="tooltip" title="développeuses et développeurs">devs</strong> plus avancés fait partie de l'apprentissage!</p>
 
             <p>Ce code contient de nombreuses <strong>fonctions</strong>. Les fonctions servent à donner des instructions à l'ordinateur et sont très utiles pour ne pas avoir à répéter toujours les mêmes instructions. Tu utilises déjà plein de fonctions dans tes programmes. <code class="language-js">color()</code>, par exemple, est une fonction qui permet de créer une couleur grâce à la librairie p5.js. <code class="language-js">ellipse()</code> est une fonction qui dessine une ellipse (ou un cercle). Te souviens-tu de la fonction pour dessiner une ligne?</p>
 
@@ -118,7 +124,7 @@
               </code>
             </pre>
 
-            <p>Et d'autres ne prennent aucun paramètre:</p>
+            <p>Ici, il y avait trois paramètres <code class="language-js">150</code>, <code class="language-js">130</code> et <code class="language-js">100</code>. Finalement, certaines fonctions ne prennent aucun paramètre:</p>
 
             <pre>
               <code class="language-js">
@@ -126,7 +132,7 @@
               </code>
             </pre>
 
-            <p>Bien que fonction <code class="language-js">noStroke()</code> ne prenne aucun paramètre, on garde quand même les parenthèses pour indiquer que si la fonction prenait des paramètres, c'est là où ils iraient. Et puis, pour nous devs, c'est un bon indice pour savoir que c'est une fonction (et non pas une variable, par exemple).</p>
+            <p>La fonction <code class="language-js">noStroke()</code> ne prend pas de paramètres, mais on garde quand même les parenthèses pour indiquer que si la fonction prenait des paramètres, c'est là où ils iraient. Et puis, pour nous devs, c'est un bon indice pour savoir que c'est une fonction (et non pas une variable, par exemple).</p>
 
             <p>La plupart du temps, on utilise des fonctions qui existent déjà dans la librairie p5.js. <code class="language-js">color()</code>, <code class="language-js">noStroke()</code>, <code class="language-js">ellipse()</code>, etc. sont toutes des fonctions qui existent déjà!</p>
 
@@ -279,27 +285,36 @@
 
           <pre>
             <code class="language-js">
-            let img;
+              let img;
 
-            function preload() {
-              img = loadImage('assets/XXXX');
-            }
+              function preload() {
+                img = loadImage('assets/XXXX');
+              }
 
-            function setup() {
-              createCanvas(400, 400);
-            }
-
-            function draw() {
-              background(YYYY);
-            }
-          </code>
-        </pre>
+              function setup() {
+                createCanvas(400, 400);
+                image(img, 0, 0);
+              }
+            </code>
+          </pre>
 
       <div class="alert alert-warning" role="alert">
-        <p><i class="fa fa-exclamation-circle"></i>  Remplace les XXXX par le nom du fichier de ton image. Respecte la casse (les majuscules et les minuscules!) À la place des YYYY, insère la variable qui stocke ton image.</p>
+        <p><i class="fa fa-exclamation-circle"></i>  Remplace les XXXX par le nom du fichier de ton image. Respecte la casse (les majuscules et les minuscules!)</p>
       </div>
 
+      <p>Si l'image est trop grande, tu peux changer sa taille avec la fonction <code class="language-js">resize()</code>:</p>
+      <pre>
+        <code class="language-js">
+          function setup() {
+          createCanvas(400, 400);
+          img.resize(400, 0);
+          image(img, 0, 0);
+        }
+      </code>
+    </pre>
+
     <p>Rappelle-toi que tu peux également changer la taille du canevas grâce à la fonction <code class="language-js">createCanvas()</code>.</p>
+
   </div>
 </div>
 </div>
@@ -362,7 +377,7 @@
         </code>
       </pre>
 
-      <p>Pour ajouter de la transparence, on utilise le code RGB<strong>A</strong>, avec un quatrième nombre en 0 et 1:</p>
+      <p>Pour ajouter de la transparence, on utilise le code RGBA, c'est à dire le code RGB avec en plus un quatrième nombre entre 0 et 1. Ce quatrième nombre détermine l'opacité de notre couleur.</p>
 
       <pre>
         <code class="language-js">
@@ -381,6 +396,14 @@
         </code>
       </pre>
 
+      <div class="alert alert-warning" role="alert">
+        <p>
+          <i class="fas fa-exclamation-circle"></i>
+            N'oublie pas les guillements <code class="language-js">' '</code> autour de ton code <code class="language-js">'rgba(0, 255, 0.6)'</code> sans quoi tu aura un message d'erreur!
+        </p>
+        <p>Bon à savoir: ici, tu peux utiliser les guillements simples <code class="language-js">' '</code> ou doubles <code class="language-js">" "</code>.</p>
+      </div>
+
     </div>
   </div>
 </div>
@@ -398,6 +421,38 @@
       <p>En t'inspirant de l'étape 8 du défi <a href="https://techieslab.github.io/balloon_instructions/">Péter ta balloune</a>, peux-tu faire bouger la bulle vers la gauche ou vers la droite?</p>
 
       <p>Tu auras besoin d'une variable pour stocker la position sur l'axe des x de ta bulle. Tu devras également changer la valeur de la position en x à chaque fois que la fonction <code class="language-js">draw()</code> est appelée (c'est à dire au moins 30 fois par secondes).</p>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint7a" role="button" aria-expanded="false" aria-controls="collapseHint7a">Indice</a>
+      </p>
+      <div class="collapse mb-3" id="collapseHint7a">
+        <div class="card card-body">
+          <p>Ton code aura l'air de ceci:</p>
+          <pre>
+            <code class="language-js">
+            let positionX = 200;
+
+            function setup() {
+              // ton code merveilleux
+            }
+
+            function draw() {
+              // ton code merveilleux
+
+              // pour dessiner le cercle de la bulle:
+              circle(positionX, 130, 100);
+
+              // pour faire bouger la bulle (remplace les ????)
+              positionX ????;
+            }
+            </code>
+          </pre>
+
+        </div>
+      </div>
+
+      <img class="img-shadow" src="images/bubble_moving_noletter.gif" alt="">
+
     </div>
   </div>
 </div>
@@ -405,14 +460,150 @@
   <div class="card-header" id="headingEight">
     <h2 class="mb-0">
       <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-        Etape 8 - Lettre dans la bulle
+        Etape 8 - Lettre dans la bulle 🔠
       </button>
     </h2>
   </div>
   <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
     <div class="card-body">
       <p>Comment afficher une lettre dans la bulle?</p>
-      <p>Tu auras besoin de la fonction <code class="language-js">text()</code> et de ta variable dans laquelle tu as stocké la position de la bulle sur l'axe des X.</p>
+      <p>Tu auras besoin de la fonction <code class="language-js">text()</code>.</p>
+
+      <p>Si j'ajoute ceci à la foncton <code class="language-js">draw()</code>, je vais avoir une lettre <strong>statique</strong> (qui ne bouge pas):</p>
+
+      <pre>
+        <code class="language-js">
+        function draw() {
+          // le reste de ton merveilleux code
+
+          //pour dessiner la bulle
+          circle(positionX, 130, 100);
+
+          // pour faire bouger la bulle
+          positionX--;
+
+          // pour afficher une lettre
+          text("S", 200, 200);
+        }
+        </code>
+      </pre>
+      <img class="img-shadow mb-3" src="images/fixed_letter.gif" alt="">
+      <p>Non seulement la lettre ne bouge pas, mais en plus elle est toute petite! Il nous faut une loupe pour la voir! 🔎 </p>
+
+      <h2>A. Agrandir et changer la couleur de la lettre</h2>
+
+      <p>En consultant la <a href="https://p5js.org/reference/" target="_blank">documentation</a>, peux-tu trouver une fonction qui te permette de choisir la <strong>taille du texte</strong> (en anglais, le mot <em>taille</em> se dit <em>size</em>)?</p>
+
+      <p>
+        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer8a" role="button" aria-expanded="false" aria-controls="collapseAnswer8a">Réponse</a>
+      </p>
+      <div class="collapse mb-3" id="collapseAnswer8a">
+        <div class="card card-body">
+          <p>C'est la fonction <code class="language-js">textSize()</code>. Le code suivant aggrandira le texte à la taille 50, par exemple:</p>
+
+          <pre>
+            <code class="language-js">
+            textSize(50);
+            text("S", 300, 50);
+            </code>
+          </pre>
+
+        </div>
+      </div>
+      <img class="img-shadow mb-3" src="images/size_50.png" alt="">
+
+      <p>Tu peux également mettre ta lettre en <strong>gras</strong> grâce à la fonction <code class="language-js">textStyle(BOLD);</code></p>
+      <img class="img-shadow mb-3" src="images/letter_bold.png" alt="">
+
+      <p>Finalement, change la couleur de la lettre grâce à la fonction...</p>
+
+      <p>
+        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer8b" role="button" aria-expanded="false" aria-controls="collapseAnswer8b">Réponse</a>
+      </p>
+      <div class="collapse mb-3" id="collapseAnswer8b">
+        <div class="card card-body">
+          <p><code class="language-js">fill()</code></p>
+          <p>Pour que la couleur de ta lettre soit noire, tu peux coder ceci: <code class="language-js">fill("black");</code></p>
+          <div class="alert alert-warning" role="alert">
+            <p>
+              <i class="fas fa-exclamation-circle"></i>
+              Assure-toi d'avoir mis les fonctions <code class="language-js">textSize()</code>, <code class="language-js">textStyle()</code> et <code class="language-js">fill()</code> <em>avant</em> la fonction <code class="language-js">text()</code>! C'est une bonne habitude à prendre, surtout si dans la suite de ton code, tu utilises la fonction <code class="language-js">fill()</code> pour remplir une autre forme d'une autre couleur.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img class="img-shadow mb-3" src="images/black_letter.png" alt="">
+
+
+      <h2>B. Positionner la lettre au centre de la bulle</h2>
+
+      <p>Pour réussir cette étape, il vaut mieux que notre bulle soit immobile, dans sa position de départ. Quelle ligne de ton code dois-tu commenter pour immobiliser ta bulle?</p>
+
+      <p>
+        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer8c" role="button" aria-expanded="false" aria-controls="collapseAnswer8c">Réponse</a>
+      </p>
+      <div class="collapse mb-3" id="collapseAnswer8c">
+        <div class="card card-body">
+          <pre>
+            <code class="language-js">
+            // positionX--;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <p>Maintenant, il te sera plus aisé de positionner ta lettre dans la bulle. En changeant les paramètres <code class="language-js">x</code> et <code class="language-js">y</code> de ta fonction <code class="language-js">text()</code>, tu devrais y arriver!</p>
+      <img class="img-shadow mb-3 flexgif" src="images/letter_far.png" alt="">
+      <img class="img-shadow mb-3 flexgif" src="images/letter_close.png" alt="">
+
+      <p>À ton avis, pourquoi ai-je choisi les valeurs <code class="language-js">320</code> et <code class="language-js">130</code>?</p>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint8a" role="button" aria-expanded="false" aria-controls="collapseHint8a">Indice</a>
+      </p>
+      <div class="collapse mb-3" id="collapseHint8a">
+        <div class="card card-body">
+          <p>Parce que ce sont les coordonnées de départ de mon cercle!</p>
+        </div>
+      </div>
+
+      <h2>C. Faire bouger la lettre avec la bulle</h2>
+      <p>Maintenant que la lettre est dans la bulle, comment la faire bouger avec la bulle?</p>
+
+      <p>Observe bien ma fonction <code class="language-js">circle()</code>: </p>
+      <pre>
+        <code class="language-js">
+        circle(positionX, 130, 100);
+        </code>
+      </pre>
+      <p>Remarque que dans mon code, le premier argument est la variable <code class="language-js">positionX</code>. L'ordinateur va remplacer la variable avec la valeur qui s'y trouve. Si on a stocké la valeur <code class="language-js">320</code>, l'ordinateur va exécuter l'instruction <code class="language-js">circle(320, 130, 100);</code></p>
+      <p>Si on a stocké dans la variable <code class="language-js">positionX</code> la valeur <code class="language-js">69</code>, l'ordinateur va exécuter l'instruction <code class="language-js">circle(69, 130, 100);</code> et ainsi de suite...</p>
+
+      <p>En combinaison avec l'instruction <code class="language-js">positionX--;</code> tu obtiens un cercle qui se déplace vers la gauche.</p>
+
+      <p>Pour ta lettre, tu peux aussi faire la même chose! Au lieu d'écrire <code class="language-js">text("S", 320, 130);</code> tu peux remplacer le <code class="language-js">320</code> par une variable: <code class="language-js">text("S", ????, 130);</code>. Quelle est cette variable?</p>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint8b" role="button" aria-expanded="false" aria-controls="collapseHint8b">Indice</a>
+      </p>
+      <div class="collapse mb-3" id="collapseHint8b">
+        <div class="card card-body">
+          <p>Tu n'as pas besoin de créer une nouvelle variable! Tu peux utiliser une variable qui te donne la position sur l'axe des <code class="language-js">x</code>...</p>
+        </div>
+      </div>
+
+      <p>
+        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer8d" role="button" aria-expanded="false" aria-controls="collapseAnswer8d">Réponse</a>
+      </p>
+      <div class="collapse mb-3" id="collapseAnswer8d">
+        <div class="card card-body">
+          <pre>
+            <code class="language-js">
+            text("S", positionX, 130);
+            </code>
+          </pre>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -421,20 +612,208 @@
   <div class="card-header" id="headingNine">
     <h2 class="mb-0">
       <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-        Etape 9 - Refactorisation avec une fonction
+        Etape 9 - Une deuxième bulle!
       </button>
     </h2>
   </div>
   <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
     <div class="card-body">
-      <p>Tes bulles s'affichent correctement avec une lettre dans chaque? Chouette! Il est maintenant temps de refactorisé ton code en utilisant... au moins une fonction!</p>
+      <p>Ajoutons une deuxième bulle avec une couleur et une lettre différentes.</p>
 
-      <p>Observe ton code. Quelles lignes se répètent? Quand des lignes de code se répètent, c'est souvent une bonne idée de créer une fonction qui contient ces lignes et que l'on pourra appeler (utiliser) à plusieurs endroits.</p>
+      <p>Dans ta fonction <code class="language-js">draw()</code>, tu peux commencer par ajouter une bulle immobile.</p>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint9a" role="button" aria-expanded="false" aria-controls="collapseHint9a">Indice</a>
+      </p>
+      <div class="collapse mb-3" id="collapseHint9a">
+        <div class="card card-body">
+          <pre>
+            <code class="language-js">
+            function draw() {
+              image(img, 0, 0);
+
+              noStroke();
+
+              // bulle blanche
+              bubbleColor = color('rgba(255, 255, 255, 0.6)');
+              fill(bubbleColor);
+              circle(positionX, 130, 100);
+
+              // lettre de la bulle blanche
+              textStyle(BOLD);
+              textSize(50);
+              fill("black");
+              text("S", positionX, 130);
+
+              // faire bouger la bulle blanche et sa lettre
+              positionX --;
+
+              // bulle rouge
+              bubbleColor = color('rgba(XXXX, YYYY, ZZZZ, 0.6)');
+              fill(bubbleColor);
+              circle(320, 130, 100);
+            }
+            </code>
+          </pre>
+
+          <p>Remplace les XXXX, YYYY et ZZZZ par les valeurs appropriées pour créer la couleur <span style="color: red"><strong>rouge</strong></span>.</p>
+        </div>
+      </div>
+      <p>Comment faire bouger cette bulle? On pourrait utiliser la variable <code class="language-js">positionX</code>, comme pour la première bulle:</p>
+
+      <pre>
+        <code class="language-js">
+        // bulle rouge
+        bubbleColor = color('rgba(255, 0, 0, 0.6)');
+        fill(bubbleColor);
+        circle(positionX, 130, 100);
+        </code>
+      </pre>
+
+      <p>Le problème, c'est que les deux bulles ont la même position en sur l'axe horizontal et vertical... en conséquence, on les voit superposées:</p>
+      <img class="img-shadow mb-3" src="images/superimposed_bubbles.gif" alt="">
+
+      <p>Conclusion: les positions sur l'axe horizontal (<code class="language-js">x</code>) doivent être <strong>indépendantes</strong>. Ceci veut dire qu'on doit avoir deux variables différentes.</p>
+
+      <p>À ton avis, comment créer une variable pour notre deuxième bulle?</p>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint9b" role="button" aria-expanded="false" aria-controls="collapseHint9b">Indice</a>
+      </p>
+      <div class="collapse mb-3" id="collapseHint9b">
+        <div class="card card-body">
+          <pre>
+            <code class="language-js">
+            let positionX = 320;
+            let positionRedX = 320;
+
+            function setup() {
+              // le code de la fonction setup()
+            }
+
+            function draw() {
+              // le code de la première bulle
+
+              // code de la deuxième bulle (rouge)
+              bubbleColor = color('rgba(255, 0, 0, 0.6)');
+              fill(bubbleColor);
+              circle(positionRedX, 130, 100);
+
+              // faire bouger la bulle rouge
+              ????
+            }
+            </code>
+          </pre>
+          <p>Arrives-tu à deviner comment faire bouger la deuxième bulle?</p>
+        </div>
+      </div>
+
+      <p>
+        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer9a" role="button" aria-expanded="false" aria-controls="collapseAnswer9a">Réponse</a>
+      </p>
+      <div class="collapse mb-3" id="collapseAnswer9a">
+        <div class="card card-body">
+          <p>Pour faire bouger ta deuxième bulle, tu peux ajouter la ligne suivante:</p>
+          <pre>
+            <code class="language-js">
+            positionRedX--;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <p>On a deux variables, mais les bulles sont encore superposées! Et si la bulle rouge avançait deux fois plus vite que la première bulle?</p>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint9c" role="button" aria-expanded="false" aria-controls="collapseHint9c">Indice</a>
+      </p>
+      <div class="collapse mb-3" id="collapseHint9c">
+        <div class="card card-body">
+          <p>Essaie avec ceci:</p>
+          <pre>
+            <code class="language-js">
+            positionRedX -= 2;
+            </code>
+          </pre>
+        </div>
+      </div>
+      <img class="img-shadow mb-3" src="images/red_twice_fast.gif" alt="">
+
+      <p>Bon, ça ne règle pas notre problème, mais au moins, les deux bulles sont indépendantes!</p>
+
+      <p>Pour que la bulle rouge parte <em>après</em> la première bulle, il faut utiliser une condition. Si la première bulle a déjà fait assez de chemin, alors on dessine la bulle rouge et on la fait bouger. Comment traduire cela en code?</p>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint9d" role="button" aria-expanded="false" aria-controls="collapseHint9d">Indice</a>
+      </p>
+      <div class="collapse mb-3" id="collapseHint9d">
+        <div class="card card-body">
+          <pre>
+            <code class="language-js">
+            if (positionX < ???) {
+            // code de la deuxième bulle (rouge)
+              bubbleColor = color('rgba(255, 0, 0, 0.6)');
+              fill(bubbleColor);
+              circle(positionRedX, 130, 100);
+
+              // faire bouger la bulle rouge
+              positionRedX--;
+            }
+            </code>
+          </pre>
+        </div>
+      </div>
+      <img class="img-shadow mb-3" src="images/first_red.gif" alt="">
+
+      <p>Il ne te reste plus qu'à ajouter une lettre dans ta deuxième bulle et le tour est joué!</p>
+    </div>
+  </div>
+</div>  <!-- end of card -->
+
+<div class="card">
+  <div class="card-header" id="headingTen">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+        Etape 10 - Plusieurs bulles!
+      </button>
+    </h2>
+  </div>
+  <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
+    <div class="card-body">
+     <p>Tu peux maintenant créer autant de bulles que tu veux!</p>
+     <p>Pour faire en sorte que les bulles ne se superposent pas, tu devras créer une variable pour stocker la position en <code class="language-js">x</code> de chacune des bulles.</p>
+
+     <p>Tu auras également besoin de plusieurs conditions!</p>
+    </div>
+  </div>
+</div>  <!-- end of card -->
+
+<div class="card">
+  <div class="card-header" id="headingEleven">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+        Etape 11 - Convertis ton animation en GIF
+      </button>
+    </h2>
+  </div>
+  <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordionExample">
+    <div class="card-body">
+      <p>Satisfait-e de tes bulles? Transforme ton animation en GIF!</p>
+
+      <p>Tu peux installer un logiciel comme <a href="https://www.cockos.com/licecap/">licecap</a> sur ton ordinateur pour enregistrer ton écran et sauvegarder le tout sous le format <strong>GIF</strong>.</p>
+
+      <div class="alert alert-warning" role="alert">
+        <p>
+          <i class="fas fa-exclamation-circle"></i>
+          Si l'ordinateur ne t'appartient pas, demande la permission au propriétaire (tes parents, peut-être?) avant d'installer un logiciel! Il se peut même qu'il faille des droits d'administrateur pour installer le logiciel sur l'ordinateur.
+        </p>
+      </div>
+
+      <p>Partage ton GIF!</p>
 
     </div>
   </div>
-</div><!--  end card -->
-
+</div>  <!-- end of card -->
 
 
 
