@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Pop your balloon!</title>
+  <title>Bulles de savants</title>
   <link rel="shortcut icon" type="image/png" href="images/ico_full.png" />
   <link rel="stylesheet" href="stylesheet/prism.css">
   <link rel="stylesheet" href="stylesheet/style.css">
@@ -14,9 +14,8 @@
 </head>
 
 <body>
-  <!-- https://images.unsplash.com/photo-1519122295308-bdb40916b529?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1568&q=80 -->
   <div class="banner"
-    style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/balloons.jpg);">
+    style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/soap_background.jpg);">
     <div id="class-languages">
       <i class="fab fa-html5 mr-1" style="color: #f84820"></i>
       <i class="fab fa-css3-alt mr-1" style="color: #1970b5"></i>
@@ -26,18 +25,16 @@
       <div class="main">
         <img src="images/logo.png" alt="">
         <div class="class-title">
-          <h1>Pop your balloon!...</h1>
-          <br>
+          <h1>Soapy bubbles...</h1>
           <h4>intro to P5.js</h4>
         </div>
       </div>
-      <p><em>To "pop someone's balloon"</em> Is a Quebecan expression that means to bring that person back to reality.
-        And that's exactly what today's challenge does! It brings us back to the harsh reality: that even a game for
-        children like <a href="https://www.youtube.com/watch?v=TANJP041TKE" target="_blank">Balloon Pop</a> is hard to
-        code. Another more reason to tackle this challenge head on!</p>
+      <p> A small challenge to discover functions, create a GIF and remind ourselves that soap can also be used to make
+        bubbles!</p>
       <a class="btn btn-primary tl-button" href="#challenge" role="button">Start !</a>
     </div>
   </div>
+  <p id=english-link>🗨️ Pour la version francaise, clicque <a href="index.html"> ici</a>!</p>
 
   <div class="container" id="challenge">
     <div class="gamification">
@@ -49,27 +46,27 @@
         A simple danger alert—check it out!
       </div>
     </div>
-
     <div class="accordion" id="accordionExample">
       <div class="card">
         <div class="card-header" id="headingOne">
           <h2 class="mb-0">
             <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapseOne"
               aria-expanded="false" aria-controls="collapseOne">
-              Step 1 - Challenges to complete before this one
+              Step 1 - Challenge to complete before going on this one
             </button>
           </h2>
         </div>
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Before tackling this challenge, we recommend that you have previously completed the two following
-              challenges:</p>
+            <p>Before you launch yourselves on this challenge, we advise you to complete the following challenges:</p>
             <ol>
               <li><a href="https://techieslab.github.io/year-prediction_instructions/" target="_blank">En 2020 je
                   serai...</a></li>
               <li><a href="https://techieslab.github.io/rainbow_instructions/" target="_blank">Ça va bien aller</a></li>
+              <li><a href="https://techieslab.github.io/balloon_instructions/english_index.html" target="_blank">Pop
+                  your balloon!</a>
+              </li>
             </ol>
-
           </div>
         </div>
       </div>
@@ -84,7 +81,7 @@
         </div>
         <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
           <div class="card-body">
-            <p>First thing, before starting to work on any sort of p5.js project: <strong>sign in <a
+            <p>First thing, before starting to work on any sort of p5.js project: <strong>log in <a
                   href="https://editor.p5js.org/" target="_blank">to your account</a></strong> by clicking on "Log in".
             </p>
             <img src="images/log_in.png" class="img-shadow mb-3" alt="">
@@ -93,7 +90,7 @@
 
             <div class="alert alert-warning" role="alert">
               <p>
-                <i class="fas fa-exclamation-circle"></i>It may seem silly to say... but dont forget to sign in to your
+                <i class="fas fa-exclamation-circle"></i> It may seem silly to say... but dont forget to sign in to your
                 account before starting to work! This will allow you to save your work (your <em>sketches</em>) for free
                 on the servers of p5.js. If you choose not to do this, you must then be prepared to download your files
                 locally (on your computer) and if anything happens to that computer, you risk loosing your work 😢
@@ -107,81 +104,211 @@
           <h2 class="mb-0">
             <button class="btn btn-link collapsed task" type="button" data-toggle="collapse"
               data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Step 3 - Draw your first balloon!
+              Step 3 - Getting familiar: the functions
             </button>
           </h2>
         </div>
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Our goal for the first part of the challenge is to make balloons of different colors appear and disappear
-              on our canvas.</p>
-            <p>🤔 How do we draw balloons in p5.js? Remember that you should always start with the simplest solution!
-              Once it works, you can make your code more sophisticated.</p>
-            <p>In the challenge <a href="https://techieslab.github.io/rainbow_instructions/" target="_blank">Ça va bien
-                aller</a>, we saw how to draw circles in different sizes and colors in p5.js, so we can use the function
-              <code class="language-js">circle()</code> to draw a red balloon. It won't be a very realistic balloon, but
-              it's a start!</p>
+            <p>By <a href="https://editor.p5js.org/Margotte/sketches/HL-jlYbaWW" target="_blank">clicking here</a>,
+              you will find a preview of what we are going to code. In fact, you just saw the solution to the challenge!
+              Is it cheating? Not at all! Reading the code of more advanced <strong data-toggle="tooltip"
+                title="developers">devs</strong>
+              is a big part of learning!
+            </p>
+            <p>This code contains multiple <strong>functions</strong>. Functions are used to give instructions to the
+              computer
+              and they are very useful to avoid repeating the same instructions. You already use a lot of functions in
+              your programs. <code class="language-js">color()</code>, for example, is a function that allows the
+              creation of a colour thanks to the p5.js library
+              <code class="language-js">ellipse()</code> is a function that draws an ellipse (or a circle, if the height
+              and width are equal).
+              Do you remember the function do draw a line?
+            </p>
 
-            <p>Where should we use the function <code class="language-js">circle()</code> in our code? In the function
-              <code class="language-js">setup()</code>? In the function <code class="language-js">draw()</code>?</p>
+            <p>Yup, it's <code class="language-js">line()</code>.</p>
+
+            <p>
+              You may have noticed that when we talk about functions, we add parentheses <strong> () </strong>
+              after the name of the function. Functions can take <strong> parameters </strong>, which
+              we are going to put it in between the parentheses. Here is an example:
+            </p>
+
+            <pre>
+              <code class="language-js">
+                textSize(50);
+              </code>
+            </pre>
+
+            <p>
+              Between the brackets, I added the number <code class="language-js">50</code>. This number represents the
+              size of my text. If, on the other hand, I had coded
+            </p>
+
+            <pre>
+              <code class="language-js">
+                textSize(100);
+              </code>
+            </pre>
+
+            <p> my text would be twice as large! Parameters are important because they can make a big difference to the
+              result of my
+              function.
+            </p>
+
+            <p>Some functions take multiple parameters:</p>
+
+            <pre>
+              <code class="language-js">
+                ellipse(150, 130, 100);
+              </code>
+            </pre>
+
+            <p>Here, there are three parameters <code class="language-js">150</code>, <code
+                class="language-js">130</code> and <code class="language-js">100</code>. Finally, some functions
+              take no parameters:</p>
+
+            <pre>
+              <code class="language-js">
+                noStroke();
+              </code>
+            </pre>
+
+            <p>The function <code class="language-js">noStroke()</code> does not take parameters, but we still keep the
+              parentheses to indicate that if the function took parameters, this is where they would go. And then, for
+              us devs,
+              it is a good clue that points to the fact that it is a function (and not a variable, for example). </p>
+
+            <p>Most of the time, we use functions that exist already in the p5.js library. <code
+                class="language-js">color()</code>, <code class="language-js">noStroke()</code>, <code
+                class="language-js">ellipse()</code>, etc. are all functions that exist already!</p>
+
+            <p>You can always check if a function exists in the p5.js library by searching in the <a
+                href="https://p5js.org/reference/" target="_blank">documentation</a> (the documentation, it's like a
+              dictionary
+              that holds all the functions of the p5.js library).</p>
+
+            <img class="img-shadow mb-3" src="images/p5-ref.png" alt="">
+
+            <p>In the documentation, you can click on each function individually to see its description and also some
+              examples.</p>
+            <img class="img-shadow mb-3" src="images/p5-fctn.png" alt="">
+
+            <p>Starting now, you should always have a tab open on your browser with the p5.js documentation. It's
+              <strong>suuuuuuuper</strong> useful!
+            </p>
+            <p>307/5000
+              Sometimes, we want to code our own functions because they don't exist in the p5.js library or in
+              JavaScript. In this
+              case, we must first <strong> define </strong> our function using the keyword ... careful ... it will be
+              very
+              surprising ... the keyword <code class="language -js "> function </code>!
+            </p>
+
+            <pre>
+              <code class="language-js">
+                function drawBubble(positionX, color, letter) {
+                fill(color);
+                ellipse(positionX, 130, 100);
+
+                // lettre
+                textStyle(BOLD);
+                textSize(50);
+                fill(0,0,0);
+                text(letter, positionX-15, 145);
+              }
+            </code>
+          </pre>
+
+            <p>
+              Here, I defined the function <code class="language-js">drawBubble ()</code> with three parameters (<code
+                class="language-js">positionX</code>, <code class="language-js">color</code> and <code
+                class="language-js">letter</code>. I then opened the braces <strong> {} </strong> and
+              inside them I put the instructions of my function. Note how I also used other functions
+              inside my <code class="language-js">drawBubble()</code> function 🤯
+            </p>
+
+            <p>After this long intro, let's go back to our sheep 🐑 🐑 🐑 🐑! <a
+                href="https://editor.p5js.org/Margotte/sketches/HL-jlYbaWW" target="_blank">Our code</a> contains
+              multiple functions. Sixteen (16) to be precise! Can you find them all? Insert them in the form below and
+              click
+              on <strong>Verify</strong>. </p>
 
             <div class="alert alert-warning" role="alert">
-              <p>
-                <i class="fas fa-exclamation-circle"></i>
-                Remember, the function <code class="language-js">setup()</code> is only executed once, after you press
-                <strong>PLAY</strong> while on the other hand, the function <code class="language-js">draw()</code> is
-                called multiple times each second.
-              </p>
+              <p>Do not add the parameters to the functions, but also do not forget to put the two parentheses. Example:
+                <code class="language-js">ellipse()</code></p>
+              <p>And do not hesitate to refer to the <a href="https://p5js.org/reference/"
+                  target="_blank">documentation</a> to double-check your answer before clicking on verify...</p>
             </div>
 
-            <p>
-              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer1" role="button"
-                aria-expanded="false" aria-controls="collapseAnswer1">Answer</a>
-            </p>
-            <div class="collapse mb-3" id="collapseAnswer1">
-              <div class="card card-body">
-                <p>In the function <code class="language-js">draw()</code>, since the coordinates of our balloon will
-                  change during the execution of the program.</p>
-                <p>Your code could be something like this:</p>
-                <pre><code class="language-js">
-                  //...
-                  function draw() {
-                  background(220);
-
-                  fill("red");
-                  circle(100, 100, 60);
-                }
-              </code></pre>
+            <form id="fonction-quiz">
+              <div class="row mb-3">
+                <div class="col">
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control">
+                </div>
               </div>
-            </div>
-
-            <img class="img-shadow mb-3" src="images/red_round.png" alt="">
-
-            <p>For the string of your balloon, look in the <a href="https://p5js.org/reference/">documentation of
-                p5.js</a> a function that could draw a line. </p>
-
-            <p>
-              <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint1" role="button"
-                aria-expanded="false" aria-controls="collapseHint1">Hint</a>
-            </p>
-            <div class="collapse mb-3" id="collapseHint1">
-              <div class="card card-body">
-                <p>The key word is <em>line</em>...</p>
+              <div class="row mb-3">
+                <div class="col">
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control">
+                </div>
               </div>
-            </div>
+              <div class="row mb-3">
+                <div class="col">
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col">
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col">
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col">
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col">
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col">
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <button class="btn btn-primary" type="submit" id="fonction-quiz-submit">Verify!</button>
+            </form>
 
-            <p>If you choose the same coordinates for the origin point of your line as you did for the circle, it will
-              result in something funky:</p>
-
-            <pre><code class="language-js">line(100 , 100, 100, 250);</code></pre>
-
-            <img class="img-shadow mb-3" src="images/balloon_stem.png" alt="">
-
-
-            <p>You want the line to start where the red circle ends. You must therefore "lower" the line, that is to say
-              change its position on the axis of <code class="language-js">y</code>.</p>
-
-            <img class="img-shadow mb-3" src="images/balloon_stem_ok.png" alt="">
           </div>
         </div>
       </div>
@@ -190,201 +317,748 @@
           <h2 class="mb-0">
             <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseFour"
               aria-expanded="false" aria-controls="collapseFour">
-              Step 4 - Making the balloon "move"
+              Step 4 - An image as background! 🖼️
             </button>
           </h2>
         </div>
         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
           <div class="card-body">
-            <p>We are now going to move our ball everywhere on our canvas.</p>
-
-            <img class="flexgif img-shadow mb-3" src="images/XXXX" alt="">
-
-            <p>The new position of the ball will be determined at random by the computer. Do you remember the function
-              that allowed us to randomly choose an adjective, in the challenge: <a
-                href="https://techieslab.github.io/year-prediction_instructions/">En 2020, je serai...</a>?</p>
-
-            <p>It was the function <code class="language-js">random()</code>. You can also use this function to choose a
-              random number. If I want a random number between 0 and 400 (because my canvas is 400 pixels tall), I can
-              code this: <code class="language-js">random(0,400)</code></p>
-
-            <p>Instead of giving our balloon the same X position (100) all the time, we can now choose an X position at
-              random: <code class="language-js">circle(random(0, 400), 100, 60);</code></p>
-
-            <p>The result is very spooky:</p>
-
             <p>
-              <a class="btn btn-danger" data-toggle="collapse" href="#collapseSee1" role="button" aria-expanded="false"
-                aria-controls="collapseSee1">View (careful, it hurts your eyes)</a>
+              To give a bit of pep to our animation, we will add an image as a background. Here are the steps:
             </p>
-            <div class="collapse mb-3" id="collapseSee1">
-              <div class="card card-body">
-                <img class="img-shadow mb-3" src="images/balloon_random_without_stem.gif" alt="">
-
-              </div>
-            </div>
-
-
-            <p>Two problems:</p>
 
             <ol>
-              <li>The balloon's string does not move</li>
-              <li>The balloon moves far too quickly</li>
+              <li>find an image on the internet;</li>
+              <li>download the photo on your pc;</li>
+              <li>import the image file in your p5.js project;</li>
+              <li>insert the photo in your code.</li>
             </ol>
 
-            <p>Let's start with the rod. Its position on the x axis must follow that of the ball. That said, if we write
-              the following code, it doesn't quite work:</p>
+            <div class="alert alert-warning" role="alert">
+              <p><i class="far fa-lightbulb"></i>
+                These steps are very similar to those you followed to change the font in the project
+                <a href="https://techieslab.github.io/year-prediction_instructions/">predictions</a></p>
+            </div>
 
-            <pre><code class="language-js">
-            line(random(0, 400) , 130, random(0, 400), 250);
-          </code></pre>
+            <p>To find a nice image (for free!), you can go to the website <a href="https://unsplash.com/">Unsplash</a>
+              and type <em>soap bubbles</em>.
+            </p>
+
+            <img class="img-shadow mb-3" src="images/unsplash.png" alt="">
 
             <p>
-              <a class="btn btn-danger" data-toggle="collapse" href="#collapseSee2" role="button" aria-expanded="false"
-                aria-controls="collapseSee2">View (warning, it also hurts your eyes)</a>
+              If you were so inclined, you could also find an image by going through a search engine of your choice.
+              Download the image on the <strong>Desktop</strong> of your computer, for example.
             </p>
-            <div class="collapse mb-3" id="collapseSee2">
-              <div class="card card-body">
-                <img class="img-shadow mb-3" src="images/balloon_random_with_stem.gif" alt="">
 
+            <p>To import the image file in your p5.js project, you create a folder in
+              "<strong>assets</strong>":</p>
+            <img class="img-shadow mb-3" src="images/step12e.png" alt="">
+
+            <div class="alert alert-warning" role="alert">
+              <p><i class="far fa-lightbulb"></i> <em>assets</em>, means a place where you can store all non-code files
+                that you will
+                use in your project (images, audio, video, fonts etc). You are not <em>obliged</em> to create an assets
+                folder, but it
+                is a good idea to do so, because one day, your project could have many more images, and you wouldn't
+                want them to be
+                spread out in many different places. Rather you want them all to be within a folder that you can easily
+                navigate in.
+              </p>
+            </div>
+
+            <p>In the <em>assets</em> folder, upload your image.</p>
+            <img class="img-shadow m-3" src="images/step12f.png" alt="">
+            <img class="img-shadow m-3" src="images/assets.png" alt="">
+
+            <p>Last step: the JavaScript! In your code, add the following lines:</p>
+
+            <pre>
+            <code class="language-js">
+              let img;
+
+              function preload() {
+                img = loadImage('assets/XXXX');
+              }
+
+              function setup() {
+                createCanvas(400, 400);
+                image(img, 0, 0);
+              }
+            </code>
+            </pre>
+
+            <div class="alert alert-warning" role="alert">
+              <p><i class="fa fa-exclamation-circle"></i> Replace the XXXX by the name of your image file.
+                Remeber to use the same case (capitals letters and small letters) as your file name.
+                We also call this concept <em>'being case-sensitive'</em>.
+              </p>
+            </div>
+
+            <p>If the image is too large, you can change its size with the function <code
+                class="language-js">resize()</code>:</p>
+
+            <pre>
+          <code class="language-js">
+            function setup() {
+            createCanvas(400, 400);
+            img.resize(400, 0);
+            image(img, 0, 0);
+          }
+          </code>
+          </pre>
+
+            <p>Remember, that you can also change the size of the canvas thanks to the <code
+                class="language-js">createCanvas()</code> function.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFive">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed task" type="button" data-toggle="collapse"
+                data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Step 5 - First Bubble!
+              </button>
+            </h2>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+            <div class="card-body">
+
+              <p>Create your first bubble in the <code class="language-js">draw()</code> function! Which function can
+                you use to
+                draw a circle?
+              </p>
+
+              <p>
+                <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer5a" role="button"
+                  aria-expanded="false" aria-controls="collapseAnswer5a">Answer</a>
+              </p>
+
+              <div class="collapse mb-3" id="collapseAnswer5a">
+                <div class="card card-body">
+                  <p>You can either use the either the <code class="language-js">circle()</code> or the <code
+                      class="language-js">ellipse()</code> function.</p>
+                </div>
+              </div>
+
+              <p>Make sure that we cannot see the black outline of the bubble.</p>
+
+              <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint5a" role="button"
+                  aria-expanded="false" aria-controls="collapseHint5a">Hint</a>
+              </p>
+              <div class="collapse mb-3" id="collapseHint5a">
+                <div class="card card-body">
+                  <p>You can use the <code class="language-js">noStroke()</code> functnion.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingSix">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed task" type="button" data-toggle="collapse"
+                data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                Step 6 - Transparent Colour!🟥 🟦 🟧 🟩 🟨 🟪 🟫
+              </button>
+            </h2>
+          </div>
+          <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+            <div class="card-body">
+              <p>You can use the <code class="language-js">fill()</code> function to give a colour to your bubble.
+                To display a more 'realistic' bubble, try giving it a slightly transparent colour.</p>
+
+              <img class="img-shadow m-3" src="images/transparent-color.png" alt="">
+              <p>For a transparent colour, you must first find the colour code in RGB (<span
+                  style="color: red"><strong>RED</strong></span>, <span
+                  style="color: green"><strong>GREEN</strong></span>, <span
+                  style="color: blue"><strong>BLUE</strong></span>):
+              </p>
+
+              <pre>
+            <code class="language-js">
+              <!-- RGB colour code for the colour 'red' -->
+              rgb(0, 255, 0)
+            </code>
+          </pre>
+
+              <p>To add transparency (or remove some opacity), we use the RGBA colour code. That is to say, the RGB
+                colour code, in addition with
+                a fourth number between 0 and 1. This fourth number determines the opacity of our colour.
+              </p>
+
+              <pre>
+            <code class="language-js">
+              <!-- code RGBA pour le vert légèrement transparent -->
+              rgba(0, 255, 0, 0.6)
+            </code>
+          </pre>
+
+              <p>In combination with the <code class="language-js">color()</code> function of p5.js, we obtain a colour,
+                which we will
+                store in a <strong>variable</strong> <code class="language-js">bubbleColor</code> and which we will then
+                use in the function
+                <code class="language-js">fill()</code>:
+              </p>
+
+              <pre>
+            <code class="language-js">
+              <!-- code RGBA pour le vert légèrement transparent -->
+              let bubbleColor = color('rgba(0, 255, 0, 0.6)');
+              fill(bubbleColor);
+            </code>
+          </pre>
+
+              <div class="alert alert-warning" role="alert">
+                <p>
+                  <i class="fas fa-exclamation-circle"></i>
+                  Dont forget the quote symbols <code class="language-js">' '</code> around the colour code <code
+                    class="language-js">'rgba(0, 255, 0.6)'</code> , without which you will get an error!
+                </p>
+
+                <p>Good to know: here, you can either use simple quotes <code class="language-js">' '</code> or
+                  double quotes <code class="language-js">" "</code>.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingSeven">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed task" type="button" data-toggle="collapse"
+                data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                Step 7 - The bubble floats
+              </button>
+            </h2>
+          </div>
+          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+            <div class="card-body">
+
+              <p>By taking inspiration from the 8th step of the <a
+                  href="https://techieslab.github.io/balloon_instructions/english_index.html">
+                  Pop your balloon!</a> challenge, can you make the balloon move towards either the left or right side?
+              </p>
+
+              <p>You will need a variable to store your bubble's position on the x axis. You will also need to change
+                the value of
+                the x position each time the <code class="language-js">draw()</code> function is called (which means at
+                least about 30 times a second).
+              </p>
+
+              <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint7a" role="button"
+                  aria-expanded="false" aria-controls="collapseHint7a">Hint</a>
+              </p>
+
+              <div class="collapse mb-3" id="collapseHint7a">
+                <div class="card card-body">
+                  <p>Your code could look a little something like this:</p>
+                  <pre>
+                  <code class="language-js">
+                  let positionX = 200;
+
+                  function setup() {
+                    // your marvelous code
+                  }
+
+                  function draw() {
+                    // your marvelous code
+
+                    // to draw the bubble's circle:
+                    circle(positionX, 130, 100);
+
+                    // to make your bubble move (replace the ????)
+                    positionX ????;
+                  }
+                  </code>
+                </pre>
+                </div>
+              </div>
+
+              <img class="img-shadow" src="images/bubble_moving_noletter.gif" alt="">
+
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingEight">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed task" type="button" data-toggle="collapse"
+                data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                Step 8 - Letter in the bubble 🔠
+              </button>
+            </h2>
+          </div>
+          <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+            <div class="card-body">
+              <p>How to display a letter in the bubble?</p>
+              <p>You will need the <code class="language-js">text()</code> function.</p>
+
+              <p>If you add this to your <code class="language-js">draw()</code> function, we will have a
+                <strong>static</strong> letter (that is to say a letter that does not move with the bubble):</p>
+              <pre>
+              <code class="language-js">
+              function draw() {
+                // the rest of your marvelous code
+
+                //to draw the bubble
+                circle(positionX, 130, 100);
+
+                // to make the bubble move
+                positionX--;
+
+                // to display a letter
+                text("S", 200, 200);
+              }
+              </code>
+            </pre>
+              <img class="img-shadow mb-3" src="images/fixed_letter.gif" alt="">
+              <p>Not only does the letter not move along with the bubble, it is also super tiny! We need a
+                magnifying glass to see it properly! 🔎
+              </p>
+
+              <h2>A. Change the colour of the letter and make it bigger</h2>
+
+              <p>By consulting the <a href="https://p5js.org/reference/" target="_blank">documentation</a>, can you find
+                a function that allows you to choose the <strong>size of the text</strong>?
+              </p>
+
+              <p>
+                <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer8a" role="button"
+                  aria-expanded="false" aria-controls="collapseAnswer8a">Answer</a>
+              </p>
+              <div class="collapse mb-3" id="collapseAnswer8a">
+                <div class="card card-body">
+                  <p>
+                    It's the <code class="language-js">textSize()</code> function. The following code will set the text
+                    size to 50:
+                  </p>
+
+                  <pre>
+                <code class="language-js">
+                  textSize(50);
+                  text("S", 300, 50);
+                </code>
+                </pre>
+
+                </div>
+              </div>
+              <img class="img-shadow mb-3" src="images/size_50.png" alt="">
+
+              <p>You can also put your text in <strong>bold</strong> thanks to the <code
+                  class="language-js">textStyle(BOLD);</code> function</p>
+              <img class="img-shadow mb-3" src="images/letter_bold.png" alt="">
+
+              <p>Finally, change the colour of your text, using the function...</p>
+
+              <p>
+                <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer8b" role="button"
+                  aria-expanded="false" aria-controls="collapseAnswer8b">Answer</a>
+              </p>
+              <div class="collapse mb-3" id="collapseAnswer8b">
+                <div class="card card-body">
+                  <p><code class="language-js">fill()</code></p>
+                  <p>If you want the colour of your letter to be black, you can use the following in your code: <code
+                      class="language-js">fill("black");</code></p>
+                  <div class="alert alert-warning" role="alert">
+                    <p>
+                      <i class="fas fa-exclamation-circle"></i>
+                      Make sure you have put the functions <code class="language-js">textSize()</code>, <code
+                        class="language-js">textStyle()</code> and <code class="language-js">fill()</code>
+                      <em>before</em>
+                      the <code class="language-js">text()</code> function! It's a good habit to pick up, especially if
+                      at some point later in your code you use the <code class="language-js">fill()</code> function to
+                      to fill a different shape with a different colour.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <img class="img-shadow mb-3" src="images/black_letter.png" alt="">
+
+
+              <h2>B. Position the letter in the center of the bubble</h2>
+
+              <p>To succeed in this step, it is best that our bubble does not move from it's starting position. Which
+                line
+                in your code can you comment-out to immobilize the bubble?
+              </p>
+
+              <p>
+                <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer8c" role="button"
+                  aria-expanded="false" aria-controls="collapseAnswer8c">Answer</a>
+              </p>
+              <div class="collapse mb-3" id="collapseAnswer8c">
+                <div class="card card-body">
+                  <pre>
+            <code class="language-js">
+            // positionX--;
+            </code>
+          </pre>
+                </div>
+              </div>
+
+              <p>Now that that is done, will be much easier for you to position the letter inside the center of the
+                bubble.
+                By changing the parameters <code class="language-js">x</code> and <code class="language-js">y</code> of
+                your <code class="language-js">text()</code> function, you should be able to make it!</p>
+              <img class="img-shadow mb-3 flexgif" src="images/letter_far.png" alt="">
+              <img class="img-shadow mb-3 flexgif" src="images/letter_close.png" alt="">
+
+              <p>Question for you: in your opinion, why do you think I picked the values <code
+                  class="language-js">320</code> and <code class="language-js">130</code>?
+              </p>
+
+              <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint8a" role="button"
+                  aria-expanded="false" aria-controls="collapseHint8a">Hint</a>
+              </p>
+              <div class="collapse mb-3" id="collapseHint8a">
+                <div class="card card-body">
+                  <p>Because those are the starting coordinates of my circle's center!</p>
+                </div>
+              </div>
+
+              <h2>C. Make the letter move with the bubble</h2>
+              <p>
+                Now that the letter is in the bubble, how can we make it move with the bubble?
+              </p>
+
+              <p>
+                Look closely at my <code class="language-js">circle()</code> function:
+              </p>
+              <pre>
+              <code class="language-js">
+              circle(positionX, 130, 100);
+              </code>
+            </pre>
+              <p>Notice that in my code, the first argument is the variable <code class="language-js">positionX</code>.
+                The computer will replace that variable with the value of the bubble's current position on the x axis.
+                If we have stored the value <code class="language-js">320</code>, the computer will execute the
+                instruction
+                <code class="language-js">circle(320, 130, 100);</code>
+              </p>
+              <p>
+                If we have stored in the <code class="language-js">positionX</code> variable the value <code
+                  class="language-js">69</code>, the computer will execute the instruction <code
+                  class="language-js">circle(69, 130, 100);</code> and so on...
+              </p>
+
+              <p>
+                In combination with the instruction <code class="language-js">positionX--;</code> you get a circle that
+                moves towards the left.
+              </p>
+
+              <p>For your letter, you can do the same thing! Instead of writing <code
+                  class="language-js">text("S", 320, 130);</code> you can replace the <code
+                  class="language-js">320</code> with a variable: <code
+                  class="language-js">text("S", ????, 130);</code>.
+                Which is that variable?
+              </p>
+
+              <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint8b" role="button"
+                  aria-expanded="false" aria-controls="collapseHint8b">Hint</a>
+              </p>
+              <div class="collapse mb-3" id="collapseHint8b">
+                <div class="card card-body">
+                  <p>You don't have to create a new variable! You can use one that gives you the position on the <code
+                      class="language-js">x</code> axis...</p>
+                </div>
+              </div>
+
+              <p>
+                <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer8d" role="button"
+                  aria-expanded="false" aria-controls="collapseAnswer8d">Answer</a>
+              </p>
+              <div class="collapse mb-3" id="collapseAnswer8d">
+                <div class="card card-body">
+                  <pre>
+            <code class="language-js">
+            text("S", positionX, 130);
+            </code>
+          </pre>
+                </div>
               </div>
             </div>
-            <p>The string does move randomly, but it does not stay below the balloon! In fact, the computer chooses a
-              first X value for the balloon (for example 150). Then it chooses <em> again </em> a value at random for
-              the value for X from the top of the string (248, for example). And finally, the computer still randomly
-              chooses a third X value for the bottom of the string (5, for example). </p>
+          </div><!--  end card -->
 
-            <p>If you want the string to be vertical, the value of X for the top and bottom of the string must be the
-              same. This code works: </p>
+          <div class="card">
+            <div class="card-header" id="headingNine">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed task" type="button" data-toggle="collapse"
+                  data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  Step 9 - A second bubble!
+                </button>
+              </h2>
+            </div>
+            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>Let's add a second bubble, tough with a different colour and letter.</p>
 
-            <pre><code class="language-js">line(100, 100, 100, 250);</code></pre>
+                <p>In your <code class="language-js">draw()</code>function, you can start with adding an immobile
+                  bubble.</p>
 
-            <p>but not this one:</p>
+                <p>
+                  <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint9a" role="button"
+                    aria-expanded="false" aria-controls="collapseHint9a">Hint</a>
+                </p>
+                <div class="collapse mb-3" id="collapseHint9a">
+                  <div class="card card-body">
+                    <pre>
+                  <code class="language-js">
+                  function draw() {
+                    image(img, 0, 0);
+      
+                    noStroke();
+      
+                    // white bubble
+                    bubbleColor = color('rgba(255, 255, 255, 0.6)');
+                    fill(bubbleColor);
+                    circle(positionX, 130, 100);
+      
+                    // letter of the white bubble
+                    textStyle(BOLD);
+                    textSize(50);
+                    fill("black");
+                    text("S", positionX, 130);
+      
+                    // make the white bouble move with it's letter
+                    positionX --;
+      
+                    // red bubble
+                    bubbleColor = color('rgba(XXXX, YYYY, ZZZZ, 0.6)');
+                    fill(bubbleColor);
+                    circle(320, 130, 100);
+                  }
+                  </code>
+                </pre>
 
-            <pre><code class="language-js">line(248, 100, 5, 250);</code></pre>
+                    <p>Replace the XXXX, YYYY and ZZZZ with the appropriate values to create the colour <span
+                        style="color: red"><strong>red</strong></span>.
+                    </p>
+                  </div>
+                </div>
+                <p>
+                  How to make the bubble move? We could use the <code class="language-js">positionX</code> variable,
+                  just like we did for the first bubble:
+                </p>
 
-            <p>Solution?</p>
+                <pre>
+              <code class="language-js">
+              // red bubble
+              bubbleColor = color('rgba(255, 0, 0, 0.6)');
+              fill(bubbleColor);
+              circle(positionX, 130, 100);
+              </code>
+            </pre>
 
-            <p>The computer must choose only one position for X and remember it in order to reuse it. And when someone
-              says "remember" in programming, they say...</p>
+                <p>
+                  The problem, is that both our bubbles have the same position on the horizontal and vertical axes...
+                  as a result, we see them displayed one on top of the other:
+                </p>
 
-            <h3>VARIABLES!</h3>
+                <img class="img-shadow mb-3" src="images/superimposed_bubbles.gif" alt="">
 
-            <p>We will store the value for X in a variable and re-use it:</p>
+                <p>
+                  Conclusion: the positions on the horizontal axis (<code class="language-js">x</code>) must be
+                  <strong>independant</strong> from eachother. This means we need two different variables.
+                </p>
 
-            <pre><code class="language-js">
-            let positionX = random(0, 400);
-            circle(positionX, 100, 60);
-            line(positionX, 130, positionX, 250);
-          </code></pre>
+                <p>
+                  In your opinion, how shall we create a second variable for our second bubble?
+                </p>
 
-            <p>YESS! The string follows the balloon! 💪</p>
+                <p>
+                  <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint9b" role="button"
+                    aria-expanded="false" aria-controls="collapseHint9b">Hitn</a>
+                </p>
+                <div class="collapse mb-3" id="collapseHint9b">
+                  <div class="card card-body">
+                    <pre>
+                  <code class="language-js">
+                  let positionX = 320;
+                  let positionRedX = 320;
+      
+                  function setup() {
+                    // the code of the setup() function
+                  }
+      
+                  function draw() {
+                    // first bubble's code
+      
+                    // second bubble's code (red)
+                    bubbleColor = color('rgba(255, 0, 0, 0.6)');
+                    fill(bubbleColor);
+                    circle(positionRedX, 130, 100);
+      
+                    // make the red bubble move
+                    ????
+                  }
+                  </code>
+                </pre>
+                    <p>
+                      Can you perhaps guess how we can make the second bubble move?
+                    </p>
+                  </div>
+                </div>
 
-          </div>
+                <p>
+                  <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer9a" role="button"
+                    aria-expanded="false" aria-controls="collapseAnswer9a">Answer</a>
+                </p>
+                <div class="collapse mb-3" id="collapseAnswer9a">
+                  <div class="card card-body">
+                    <p>To make the second bubble move, you can add the following line:</p>
+                    <pre>
+                  <code class="language-js">
+                  positionRedX--;
+                  </code>
+                </pre>
+                  </div>
+                </div>
+
+                <p>
+                  We have two variables, but the bubbles are stil on top of each other! And what if the red bubble moved
+                  twice
+                  as fast as the first one?
+                </p>
+
+                <p>
+                  <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint9c" role="button"
+                    aria-expanded="false" aria-controls="collapseHint9c">Hint</a>
+                </p>
+                <div class="collapse mb-3" id="collapseHint9c">
+                  <div class="card card-body">
+                    <p>Try using this:</p>
+                    <pre>
+                  <code class="language-js">
+                  positionRedX -= 2;
+                  </code>
+                </pre>
+                  </div>
+                </div>
+                <img class="img-shadow mb-3" src="images/red_twice_fast.gif" alt="">
+
+                <p>
+                  Well, that does not fix our problem, but at least, both bubbles are independant!
+                </p>
+
+                <p>
+                  In order for the red bubble to move <em>after</em> the first bubble, we have to use a condition. If
+                  the first
+                  bubble has already moved some distance, then we can draw the red bubble and make it move. How to
+                  translate this
+                  into code?
+                </p>
+
+                <p>
+                  <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint9d" role="button"
+                    aria-expanded="false" aria-controls="collapseHint9d">Hint</a>
+                </p>
+                <div class="collapse mb-3" id="collapseHint9d">
+                  <div class="card card-body">
+                    <pre>
+                  <code class="language-js">
+                  if (positionX < ???) {
+                  // second bubble's code (rouge)
+                    bubbleColor = color('rgba(255, 0, 0, 0.6)');
+                    fill(bubbleColor);
+                    circle(positionRedX, 130, 100);
+      
+                    // make the red bubble move
+                    positionRedX--;
+                  }
+                  </code>
+                </pre>
+                  </div>
+                </div>
+                <img class="img-shadow mb-3" src="images/first_red.gif" alt="">
+
+                <p>All that remains for you to do is add a letter to the second bubble and the jig is up!</p>
+              </div>
+            </div>
+          </div> <!-- end of card -->
+
+          <div class="card">
+            <div class="card-header" id="headingTen">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed task" type="button" data-toggle="collapse"
+                  data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                  Step 10 - Multiple Bubbles!
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>You can now create as many bubbles as you want!</p>
+                <p>
+                  To be sure that the bubbles do not overlap eachother, you will have to create a variable to store the
+                  <code class="language-js">x</code> position of each one of the bubbles.
+                </p>
+
+                <p>You will also need multiple conditions!</p>
+              </div>
+            </div>
+          </div> <!-- end of card -->
+
+          <div class="card">
+            <div class="card-header" id="headingEleven">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseEleven"
+                  aria-expanded="false" aria-controls="collapseEleven">
+                  Step 11 - How to refactor?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                  Your bubbles are displaying correctly with une letter in each? Awesome! It is now time  to
+                  refactor (clean the repeating parts) of your code by using... at least one function!</p>
+
+                <p>
+                  Have a closer look at your code. Which lines are repeated? When there are lines repeating themselves in code, it's
+                  ofter a good idea to create a function that contains those lines and we could call (use) that function at multiple points.
+                </p>
+              </div>
+            </div>
+          </div> <!-- end of card -->
+
         </div>
       </div>
-      <div class="card">
-        <div class="card-header" id="headingFive">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseFive"
-              aria-expanded="false" aria-controls="collapseFive">
-              Step 5 - Display the balloons slower
-            </button>
-          </h2>
-        </div>
-        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-          <div class="card-body">
-
-            <p>Inspire yourself from step 9 in the challenge <a
-                href="https://techieslab.github.io/year-prediction_instructions/">of the predictions</a> to slow down
-              the balloon.</p>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingSix">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseSix"
-              aria-expanded="false" aria-controls="collapseSix">
-              Step 6 - Make your balloon more realistic
-              <span class="badge badge-dark">Optional</span>
-            </button>
-          </h2>
-        </div>
-        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-          <div class="card-body">
-
-            <p>Our basic code works, so we can have fun making it more sophisticated. What would be nice is to work on
-              the appearance of the circle so that it has a more realistic balloon shape.</p>
-            <img class="img-shadow mb-3" src="images/ellipse_balloon.png" alt="">
-            <p>Instead of using a circle, you can use an ellipse. Consult the <a
-                href="https://p5js.org/reference/#/p5/ellipse">documentation of p5.js</a> to draw ellipses.</p>
-
-            <p>The idea is to use two ellipses: one for the balloon itself, and the other (much smaller) for its knot.
-            </p>
-
-            <p>Some ways to help you:</p>
-            <ul>
-              <li>To remove the black outline of the ball, you must use the function <code
-                  class="language-js">noStroke()</code></li>
-              <li>If you use the function <code class="language-js">noStroke()</code> your string will probably
-                disappear. You can bring back the string with the function <code class="language-js">stroke()</code>
-              </li>
-              <li>To move the balloon vertically, you will also have to give a random value to the Y position of the
-                ball. You will probably need a second variable for this.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingSeven">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed task" type="button" data-toggle="collapse"
-              data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-              Step 7 - Random colors
-              <span class="badge badge-dark">Optional</span>
-              <span class="badge badge-warning">Difficult 🏆</span>
-            </button>
-          </h2>
-        </div>
-        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
-          <div class="card-body">
-
-            <p>How can we make the balloon change randomly between three colors (red, blue and green, for example)?</p>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
-  </div>
 
-  <div class="footer">
-    <div class="footer-links">
-      <a href="https://techieslab.be/"><i class="fas fa-globe"></i></i></a>
-      <a href="https://www.facebook.com/TechiesLabBrussels"><i class="fab fa-facebook"></i></a>
-      <a href="https://twitter.com/TechiesLab"><i class="fab fa-twitter"></i></a>
+    <div class="footer">
+      <div class="footer-links">
+        <a href="https://techieslab.be/"><i class="fas fa-globe"></i></i></a>
+        <a href="https://www.facebook.com/TechiesLabBrussels"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/TechiesLab"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="footer-copyright">
+        <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/3298561-faites-votre-mise-en-page-avec-flexbox#/id/r-3298711"
+          rel="noopener noreferrer" target="_blank" class="alert-link copyright">
+          <i class="far fa-copyright"></i>
+          2020 Techies Lab ASBL. All rights reserved.
+        </a>
+      </div>
     </div>
-    <div class="footer-copyright">
-      <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/3298561-faites-votre-mise-en-page-avec-flexbox#/id/r-3298711"
-        rel="noopener noreferrer" target="_blank" class="alert-link copyright">
-        <i class="far fa-copyright"></i>
-        2020 Techies Lab ASBL. All rights reserved.
-      </a>
-    </div>
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-  <script src="javascript/prism.js"></script>
-  <script type="text/javascript" src="javascript/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+    <script src="javascript/prism.js"></script>
+    <script type="text/javascript" src="javascript/app.js"></script>
 </body>
 
 </html>
